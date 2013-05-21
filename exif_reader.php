@@ -37,7 +37,7 @@ class KEHA76_Exif_Reader {
 		{
 			// There are 2 arrays which contains the information need, so it's easier to state them both
 			$dataIFD0 = exif_read_data( $imagePath , 'IFD0', 0 );
-	      	$dataEXIF = exif_read_data( $imagePath , 'EXIF', 0 );
+	      		$dataEXIF = exif_read_data( $imagePath , 'EXIF', 0 );
 	      	
 			// Error control
 			$notFound = "Unknown";
@@ -90,14 +90,14 @@ class KEHA76_Exif_Reader {
 			
 			// Construct the data array to return
 			$return = array();
-	      	$return[ 'make' ]         = $make;
-			$return[ 'model' ]        = $model;
+	      		$return[ 'make' ]          = $make;
+			$return[ 'model' ]         = $model;
 			$return[ 'focal_length' ]  = $focalLength;
-			$return[ 'exposure' ]     = $exposure;
-			$return[ 'aperture' ]     = $aperture;
+			$return[ 'exposure' ]      = $exposure;
+			$return[ 'aperture' ]      = $aperture;
 			$return[ 'shutter_speed' ] = $shutterSpeed;
-			$return[ 'date_taken' ]         = $date;
-			$return[ 'iso' ]          = $iso;
+			$return[ 'date_taken' ]    = $date;
+			$return[ 'iso' ]           = $iso;
 			$return[ 'f_stop' ]        = $this->getFstop( $exif );
 			// Return data
 			return $return;
